@@ -25,6 +25,7 @@ def assess_portfolio(sd = dt.datetime(2008,1,1), ed = dt.datetime(2009,1,1), \
     # Get portfolio statistics (note: std_daily_ret = volatility)
     cr, adr, sddr, sr = [0.25, 0.001, 0.0005, 2.1] # add code here to compute stats
 
+    # fill nan values
     prices.fillna(method='ffill', inplace=True)
     prices.fillna(method='bfill', inplace=True)
 
