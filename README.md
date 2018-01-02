@@ -9,7 +9,7 @@ All homework in this project use Python 2.7 and Numpy.
 This homework aims to generate data manually that I believe will work better on one learner than another. The detailed description:
 http://quantsoftware.gatech.edu/Defeat_learners
 
-> Run:
+> Run:      
 > PYTHONPATH=../:./ python testbest4.py
 
 
