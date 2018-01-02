@@ -37,7 +37,6 @@ class QLearner(object):
         """
         self.s = s
 
-        # action = rand.randint(0, self.num_actions-1)
         action = self.Q[s].index(max(self.Q[s])) if self.rar <= rand.random() else rand.randint(0, self.num_actions-1)
         self.a = action
         self.rar *= self.radr
@@ -52,14 +51,16 @@ class QLearner(object):
         @param r: The ne state
         @returns: The selected action
         """
-        # action = rand.randint(0, self.num_actions-1)
-
         s = self.s
         a = self.a
+        # Add a pair of [s, a, s', r] to the memory
+        # for Dyna-Q
         self.memory.append([s, a, s_prime, r])
         next_action = self.Q[s_prime].index(max(self.Q[s_prime]))
         self.Q[s][a] = (1 - self.alpha) * self.Q[s][a] + self.alpha * (r + self.gamma * self.Q[s_prime][next_action])
 
+        # if @dyna == 0, then it is normal version, and will not enter the loop
+        # the value of @dyna means how many extra random updates take place.
         for i in range(self.dyna):
             [s_d, a_d, s_prime_d, r_d] = self.memory[rand.randint(0, len(self.memory) - 1)]
             next_action_d = self.Q[s_prime_d].index(max(self.Q[s_prime_d]))

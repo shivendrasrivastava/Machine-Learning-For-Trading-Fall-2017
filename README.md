@@ -58,5 +58,13 @@ This homework aims to minimize the volatility of the portfolio assuming we know 
 >   PYTHONPATH=../:./ python optimization.py
 
 ### qlearning_robot
+This homework aims to build a Q-learner and Dyna-Q Learner.
+Details: http://quantsoftware.gatech.edu/Qlearning_robot
+
+>   Grading:
+>   PYTHONPATH=../:./ python grade_robot_qlearning.py   
+>
+>   Testing:
+>   PYTHONPATH=../:./ python testqlearner.py
 
 ### strategy_learner
