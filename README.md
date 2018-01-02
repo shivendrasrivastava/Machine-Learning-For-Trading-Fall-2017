@@ -2,18 +2,21 @@
 
 This project contains all the homework from the course CS7646 Machine Learning for Trading in Fall 2017 at Georgia Tech.
 
-## defeat_learners
+## Environment and Prerequisites
+All homework in this project use Python 2.7 and Numpy.
 
-## assess_learners
+### defeat_learners
 
-## assess_portfolio
+### assess_learners
 
-## manual_strategy
+### assess_portfolio
 
-## marketsim
+### manual_strategy
 
-## optimize_something
+### marketsim
 
-## qlearning_robot
+### optimize_something
 
-## strategy_learner
+### qlearning_robot
+
+### strategy_learner
