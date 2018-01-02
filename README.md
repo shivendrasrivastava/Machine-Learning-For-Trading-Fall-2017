@@ -24,17 +24,17 @@ http://quantsoftware.gatech.edu/Assess_learners
 This homework aims to analyze a portfolio through time. Details:
 http://quantsoftware.gatech.edu/Assess_portfolio
 
->   Grading:
+>   Grading:   
 >   PYTHONPATH=../:./ python grade_analysis.py
 >     
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python analysis.py
 
 ### manual_strategy
 This homework aims to create a manual strategy for stock. Details:
 http://quantsoftware.gatech.edu/Manual_strategy
 
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python ManualStrategy.py
 
 
@@ -42,39 +42,39 @@ http://quantsoftware.gatech.edu/Manual_strategy
 This homework aims to create a market simulation code (given order csv, output dataframe of portfolio values through time). Details:
 http://quantsoftware.gatech.edu/Marketsim
 
->   Grading:
+>   Grading:   
 >   PYTHONPATH=../:./ python grade_marketsim.py   
 >
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python marketsim.py
 
 ### optimize_something
 This homework aims to minimize the volatility of the portfolio assuming we know the stock prices. Details: http://quantsoftware.gatech.edu/Optimize_something
 
->   Grading:
+>   Grading:   
 >   PYTHONPATH=../:./ python grade_optimization.py   
 >
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python optimization.py
 
 ### qlearning_robot
 This homework aims to build a Q-learner and Dyna-Q Learner.
 Details: http://quantsoftware.gatech.edu/Qlearning_robot
 
->   Grading:
+>   Grading:   
 >   PYTHONPATH=../:./ python grade_robot_qlearning.py   
 >
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python testqlearner.py
 
 ### strategy_learner
 This homework aims to create a strategy using machine learning to yield profit. Details:
 http://quantsoftware.gatech.edu/Strategy_learner
 
->   Grading:
+>   Grading:   
 >   PYTHONPATH=../:./ python grade_strategy_learner.py   
 >
->   Testing:
+>   Testing:   
 >   PYTHONPATH=../:./ python experiment1.py   
 >   PYTHONPATH=../:./ python experiment2.py     
 >   PYTHONPATH=../:./ python StrategyLearner.py
