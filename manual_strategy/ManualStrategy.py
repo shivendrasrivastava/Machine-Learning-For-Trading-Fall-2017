@@ -34,18 +34,11 @@ def testPolicy(symbol = 'JPM', sd = dt.datetime(2008, 1, 1), ed = dt.datetime(20
     BB = bollinger_band(prices, window = my_window, show_pic = False)
     SMA = simple_moving_average(prices, window = my_window, show_pic = False)
     EMA = exponential_moving_average(prices, window = my_window, show_pic = False)
-    # print [x for x in BB if x > 1 or x < -1]
-    for i in range(my_window, len(prices.index)):
 
-        # if BB[i] < -1 and prices.values[i - 1] < prices.values[i]:
-        #     df_trades['val'].iloc[i] = 1000 - current
-        #     current = 1000
-        # # elif abs(SMA[i]) < 0.01:
-        # #     df_trades['val'].iloc[i] = -current
-        # #     current = 0
-        # elif BB[i] > 1 and prices.values[i - 1] > prices.values[i]:
-        #     df_trades['val'].iloc[i] = - current - 1000
-        #     current = -1000
+    # Manual Strategy using Simple Moving Average
+    for i in range(my_window, len(prices.index)):
+        # Smaller than threshold -> buy
+        # Bigger than threshold -> sell
         if SMA[i] < -0.1:
             df_trades['val'].iloc[i] = 1000 - current
             current = 1000

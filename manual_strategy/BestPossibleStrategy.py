@@ -25,17 +25,11 @@ def testPolicy(symbol = 'JPM', sd = dt.datetime(2008, 1, 1), ed = dt.datetime(20
     INCREASING = nums[1] > nums[0]
     df_trades['val'].iloc[0] = 1000 * (1 if INCREASING else -1)
 
+    # Buy at local minima, sell at local maxima
     for i in range(1, len(nums) - 1):
         if (nums[i] < nums[i + 1] and not INCREASING) or (nums[i] >= nums[i + 1] and INCREASING):
             INCREASING = not INCREASING
             df_trades['val'].iloc[i] = 2000 * (1 if INCREASING else -1)
-
-        # if nums[i - 1] < nums[i] and not INCREASING:
-        #     INCREASING = not INCREASING
-        #     df_trades['val'].iloc[i - 1] = 2000
-        # elif nums[i - 1] >= nums[i] and INCREASING:
-        #     INCREASING = not INCREASING
-        #     df_trades['val'].iloc[i - 1] = -2000
 
     return df_trades
 
