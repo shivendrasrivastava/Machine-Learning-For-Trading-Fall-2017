@@ -18,8 +18,6 @@ def f(X, normed):
 
     return Y
 
-# This is the function that will be tested by the autograder
-# The student must update this code to properly implement the functionality
 def optimize_portfolio(sd=dt.datetime(2008,1,1), ed=dt.datetime(2009,1,1), \
     syms=['GOOG','AAPL','GLD','XOM'], gen_plot=False):
 
@@ -56,7 +54,7 @@ def optimize_portfolio(sd=dt.datetime(2008,1,1), ed=dt.datetime(2009,1,1), \
     port_val = alloced.sum(axis=1)
     daily_returns = (port_val / port_val.shift(1)) - 1
     daily_returns = daily_returns[1:]
-    cr = port_val[-1] - 1 #### wait a min
+    cr = port_val[-1] - 1 
     adr = daily_returns.mean()
     sddr = daily_returns.std()
 
