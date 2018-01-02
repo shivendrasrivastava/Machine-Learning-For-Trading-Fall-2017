@@ -49,6 +49,13 @@ http://quantsoftware.gatech.edu/Marketsim
 >   PYTHONPATH=../:./ python marketsim.py
 
 ### optimize_something
+This homework aims to minimize the volatility of the portfolio assuming we know the stock prices. Details: http://quantsoftware.gatech.edu/Optimize_something
+
+>   Grading:
+>   PYTHONPATH=../:./ python grade_optimization.py   
+>
+>   Testing:
+>   PYTHONPATH=../:./ python optimization.py
 
 ### qlearning_robot
 
