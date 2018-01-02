@@ -12,7 +12,6 @@ def compute_portvals(orders_file = "./orders/orders.csv", start_val = 1000000, c
     # this is the function the autograder will call to test your code
     # NOTE: orders_file may be a string, or it may be a file object. Your
     # code should work correctly with either input
-    # TODO: Your code here
     f = None
     if type(orders_file) == types.FileType:
         f = orders_file
@@ -33,9 +32,11 @@ def compute_portvals(orders_file = "./orders/orders.csv", start_val = 1000000, c
     prices = get_data(names, pd.date_range(start_date, end_date))
     prices = prices[names]  # remove SPY
     portvals = pd.DataFrame(data=np.arange(len(prices)), index=prices.index, columns=['val'])
+
     shares = {}
     for name in names:
         shares[name] = 0
+        
     order_idx = 0
     for i in range(len(portvals)):
         while order_idx < len(order_df.index) and portvals.index[i] == order_df.index[order_idx]:
