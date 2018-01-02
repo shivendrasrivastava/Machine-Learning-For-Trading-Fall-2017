@@ -1,6 +1,7 @@
 import numpy as np
 import time
 
+# Decision Tree Learner
 class DTLearner():
     def __init__(self, leaf_size=1, verbose=False):
         self.leaf_size = leaf_size
@@ -20,6 +21,7 @@ class DTLearner():
         self.tree = tree
 
 
+    # implement tree by list
     def buildtree(self, data):
         Xtrain = data[:, :-1]
         Ytrain = data[:, -1]
@@ -28,7 +30,7 @@ class DTLearner():
         if np.std(Ytrain) == 0.0:
             return np.array([[self.LEAF, Ytrain.mean(), self.NA, self.NA]])
 
-
+        # correlation as the metric to decide which feature to choose
         corrs = np.array([abs(np.corrcoef(Xtrain[:, x], Ytrain)[0][1]) for x in range(Xtrain.shape[1])])
         corrs[np.isnan(corrs)] = 0
 

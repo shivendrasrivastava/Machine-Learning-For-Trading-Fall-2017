@@ -29,8 +29,6 @@ class RTLearner():
             return np.array([[self.LEAF, Ytrain.mean(), self.NA, self.NA]])
 
         # Rather than using correlation as metric, randomly pick a factor
-        # corrs = [abs(np.corrcoef(Xtrain[:, x], Ytrain)[0][1]) for x in range(Xtrain.shape[1])]
-        # factor = np.argmax(corrs)
         factor = np.random.randint(Xtrain.shape[1])
 
         # Rather than choose median, simply choose two random values in that factor, and take the mean
