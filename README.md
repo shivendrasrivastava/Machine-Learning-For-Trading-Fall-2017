@@ -68,3 +68,13 @@ Details: http://quantsoftware.gatech.edu/Qlearning_robot
 >   PYTHONPATH=../:./ python testqlearner.py
 
 ### strategy_learner
+This homework aims to create a strategy using machine learning to yield profit. Details:
+http://quantsoftware.gatech.edu/Strategy_learner
+
+>   Grading:
+>   PYTHONPATH=../:./ python grade_strategy_learner.py   
+>
+>   Testing:
+>   PYTHONPATH=../:./ python experiment1.py   
+>   PYTHONPATH=../:./ python experiment2.py     
+>   PYTHONPATH=../:./ python StrategyLearner.py

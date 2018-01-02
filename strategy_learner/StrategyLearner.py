@@ -37,9 +37,9 @@ class StrategyLearner(object):
 
         window_size = self.window_size
         feature_size = self.feature_size
-        # N day return
+        # N day return (predict the N-day return)
         N = self.N
-        # threshold
+        # threshold to determine whether it's a buy signal or a sell signal or nothing
         threshold = max(0.03, 2 * self.impact)
 
         prices = ut.get_data([symbol], pd.date_range(sd, ed))
@@ -51,7 +51,7 @@ class StrategyLearner(object):
         X = []
         Y = []
         for i in range(window_size + feature_size + 1, len(prices) - N):
-            # X will be a feature_size * 3 dimension data
+            # X will be a feature_size * 3 dimension data (concatenate three indicators as feature)
             X.append( np.concatenate( (SMA[i - feature_size : i], BB[i - feature_size : i], EMA[i - feature_size : i]) ) )
             ret = (prices.values[i + N] - prices.values[i]) / prices.values[i]
             if ret > threshold:
