@@ -42,7 +42,7 @@ http://quantsoftware.gatech.edu/Manual_strategy
 This homework aims to create a market simulation code (given order csv, output dataframe of portfolio values through time). Details:
 http://quantsoftware.gatech.edu/Marketsim
 
->   Grading:   
+>   Grading:
 >   PYTHONPATH=../:./ python grade_marketsim.py   
 >
 >   Testing:
